@@ -1,0 +1,7 @@
+{
+  "name": "freemeAngular",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
