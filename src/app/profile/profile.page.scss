@@ -1,0 +1,25 @@
+.profile {
+  display: flex;
+  align-items: center;
+  margin: 1em;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  margin-right: 1em;
+  border: 2px solid var(--ion-color-light);
+  border-radius: 50%;
+}
+
+h3 {
+  color: var(--ion-color-medium);
+}
+
+.cyan-color {
+  color: var(--ion-color-primary);
+}
+
+.pink-color {
+  color: var(--ion-color-secondary);
+}

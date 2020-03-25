@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl: 'https://api7.cloudframework.io/freeme/mobile',
 };

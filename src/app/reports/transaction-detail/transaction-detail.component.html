@@ -1,0 +1,18 @@
+<section>
+  <figure class="">
+    <img [src]="config.icon" alt="Icon">
+    <figcaption class="bold">{{config.title}}</figcaption>
+  </figure>
+
+ <label class="f-size-short  {{config.style}}">abc12398765</label>
+
+ <aside class="">
+   <ul>
+     <li class="f-size-large {{config.style}}" >{{userInfo.amount | currency:'€' : 'symbol' : '2.1-1' }}</li>
+     <li class="month">{{userInfo.dateShow}}</li>
+     <li class="bold {{config.style}}">{{userInfo.vat | currency: '€' : 'symbol' : '2.1-1'}}</li>
+     <li class="bold f-size-short">IVA</li>
+   </ul>
+
+ </aside>
+</section>

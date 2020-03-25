@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+
+      <ion-button (click)="presentActionSheet()">
+        <ion-text color="secondary">Filtrar</ion-text>
+        <ion-icon color="secondary" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="primary">Facturación y ventas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-progress-bar *ngIf="!hasLoaded" type="indeterminate"></ion-progress-bar>
+
+  <div *ngIf="hasLoaded">
+    <h2>{{(summary.debit.dateShow ? summary.debit.dateShow : summary.credit)}}</h2>
+    <app-transaction-detail [userInfo]="summary.debit"></app-transaction-detail>
+    <app-transaction-detail [userInfo]="summary.credit"></app-transaction-detail>
+
+    <div style="padding: 1em;">
+      <apx-chart [xaxis]="chartBars.xaxis" [series]="chartBars.series" [chart]="chartBars.chart"
+        [plotOptions]="chartBars.plotOptions" [title]="chartBars.title" [legend]="chartBars.legend"
+        [colors]="chartBars.colors" [tooltip]="chartBars.tooltip" [stroke]="chartBars.stroke"
+        [labels]="chartBars.labels"></apx-chart>
+    </div>
+  </div>
+
+</ion-content>

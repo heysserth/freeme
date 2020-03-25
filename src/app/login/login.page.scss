@@ -1,0 +1,115 @@
+ion-content.bg-login {
+    position: relative;
+    --background: none;
+    background-image: url('../../assets/sign-in/foto-back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.logo {
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 100%;
+    max-width: 550px;
+}
+
+.form-login {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 90%;
+    height: 100%;
+    max-height: 350px;
+    max-width: 500px;
+    margin: 0 auto;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/* INPUTS */
+ion-list.list-style {
+    --ion-background-color: transparent;
+    --ion-border-color: transparent;
+
+    margin: 1em 0;
+}
+
+list-ios {
+    background: none;
+    opacity: 0.5;
+
+    margin-top: 1em;
+}
+
+.form-login ion-item {
+    --color: white;
+    --border-color: white;
+}
+
+.form-login ion-item.error {
+    --color: white;
+    --border-color: red;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.error-msg {
+    display: block;
+    font-size: 80%;
+    border: 0;
+    margin: 0.5em 0 0.2em 0;
+    color: white;
+    align-self: flex-end;
+
+}
+
+
+ion-icon.input {
+    color: white;
+    padding-right: 1em;
+}
+
+
+/* BUTTON AND LINKS */
+.button-wrapper {
+    text-align: center;
+    height: 55%;
+    width: 95%;
+    margin-top: 1em;
+}
+
+.button-wrapper ion-button {
+    --border-radius: 20px;
+
+}
+.flex-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-links a {
+    color: white;
+    margin: 1em 0;
+}
+
+.flex-links a span {
+    color: var(--ion-color-primary);
+    font-weight: bold;
+}
+
+.no-account {
+    font-size: 80%;
+}
+
+.no-account span {
+    display: block;
+}

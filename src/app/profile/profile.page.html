@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title  color="primary">Tu cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="hasLoaded">
+
+  <ion-progress-bar *ngIf="!hasLoaded" type="indeterminate"></ion-progress-bar>
+
+  <div class="profile">
+    <img src='../../assets/profile/avatar-icon.svg' alt="Logo" />
+    <div class="profile-info">
+      <h3 class="user-name">{{userInfo.User.name}}</h3>
+      <p class="cyan-color">
+        {{userInfo.Balance.income}} $ | <span class="pink-color">{{userInfo.Balance.expense}} $</span>
+      </p>
+    </div>
+  </div>
+
+  <form [formGroup]="formUser" class="form-profile " ref={signupFormRef}>
+    <ion-list no-lines class="list-profile">
+
+      <ion-item >
+        <ion-input placeholder="Nombre y apellidos" formControlName="name" name="username" type="text" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Email" formControlName=email name="email" type="email" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Teléfono" formControlName=mobile name="mobile" type="text" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="NIF / NIE" formControlName=nifnie name="nifnie" type="text" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Dirección" formControlName=address name="address" type="text" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Código Postal" formControlName=postalcode name="postalcode" type="text" >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Tipo de IRPF" name="irpf" type="text" value="Tipo de IRPF" readonly >
+        </ion-input>
+        <ion-badge slot="end">{{userInfo.User.irpf}}%</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Cambiar contraseña" formControlName='password' name="password" type="text" >
+        </ion-input>
+      </ion-item>
+
+    </ion-list>
+
+  </form>
+
+</ion-content>
