@@ -3,7 +3,7 @@
 
 **Demo** https://freeme-bed4d.firebaseapp.com
 ## ¿Comó funciona?
-### 1. asegúrate de tener instalado:
+### 1. Asegúrate de tener instalado:
 - Node v10.16.3 [Node] (https://nodejs.org/es/download)
 - Angular npm install -g @angular/cli
 - Ionic npm install -g @ionic/cli
