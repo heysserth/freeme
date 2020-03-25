@@ -23,12 +23,7 @@ export class AppComponent implements OnInit {
       title: 'Facturación y ventas',
       url: '/reports',
       icon: 'receipt'
-    },
-    {
-      title: 'Logout',
-      url: '/login',
-      icon: 'log-out'
-    },
+    }
   ];
 
   constructor(
@@ -49,7 +44,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-
     try {
       if (this.authSrv.isAuthenticated()) {
         this.router.navigate(['/profile']);
@@ -59,5 +53,9 @@ export class AppComponent implements OnInit {
     } catch (error) {
       this.router.navigate(['/login']);
     }
+  }
+
+  logOut() {
+    sessionStorage.clear();
   }
 }

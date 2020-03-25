@@ -1,8 +1,8 @@
 {
-  "name": "freemeAngular",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "name": "Freeme",
+  "version": "1.0.0",
+  "author": "Heysser Aguilera",
+  "homepage": "https://freeme-bed4d.firebaseapp.com",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -58,5 +58,5 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project"
+  "description": "Demostración para el sistema Freeme"
 }

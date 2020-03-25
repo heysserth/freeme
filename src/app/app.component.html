@@ -4,12 +4,17 @@
       <ion-content>
         <ion-list id="inbox-list">
           <img class="logo" src='assets/logo-freeme.svg' alt="Logo" />
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none"
+          <ion-menu-toggle auto-hide="false">
+            <ion-item  *ngFor="let p of appPages; let i = index" (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none"
               detail="false" [class.selected]="selectedIndex == i">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
+
+            <ion-item (click)="logOut()" routerDirection="root" [routerLink]="['/login']" lines="none" detail="false">
+            <ion-icon slot="start" name="log-out-outline"></ion-icon>
+            <ion-label>Cerrar sesión</ion-label>
+          </ion-item>
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
