@@ -2,19 +2,12 @@ ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 }
 
-ion-menu.md ion-content {
-  --padding-start: 8px;
-  --padding-end: 8px;
-  --padding-top: 20px;
-  --padding-bottom: 20px;
+ion-menu ion-list{
+  padding:0;
 }
-
-ion-menu ion-list {
-  padding: 20px 0;
-  background-color: var(--ion-color-secondary);
+.list-md{
+  padding-top: 0;
 }
-
-
 ion-menu ion-list ion-item{
   
   background-color: transparent;
@@ -127,4 +120,13 @@ ion-item.selected {
 
 .logo{
   background-color: var(--ion-color-secondary);
+  padding: 1em;
+}
+
+.inner-scroll.scroll-y{
+  padding: 0;
+}
+
+.mirave{
+  padding: 0;
 }

@@ -48,7 +48,7 @@ export class LoginPage implements OnInit {
       this.formLogin.markAllAsTouched();
       this.isLoading = false;
     }
-    
+
   }
 
   async presentAlert(headerMsg) {
