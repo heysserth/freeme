@@ -33,17 +33,22 @@ export class LoginPage implements OnInit {
 
   onSubmit() {
     this.isLoading = true;
-    this.userSvr.login(this.formLogin.value).subscribe((response: any) => {
-
+    if (this.formLogin.valid) {
+      this.userSvr.login(this.formLogin.value).subscribe((response: any) => {
+        this.isLoading = false;
+        if (response.status === 200) {
+          sessionStorage.setItem('dstoken', response.data.dstoken);
+          this.router.navigateByUrl('/profile');
+        }
+      }, async (error) => {
+        this.isLoading = false;
+        this.presentAlert(error.message);
+      });
+    } else {
+      this.formLogin.markAllAsTouched();
       this.isLoading = false;
-      if (response.status === 200) {
-        sessionStorage.setItem('dstoken', response.data.dstoken);
-        this.router.navigateByUrl('/profile');
-      }
-    }, async (error) => {
-      this.isLoading = false;
-      this.presentAlert(error.message);
-    });
+    }
+    
   }
 
   async presentAlert(headerMsg) {

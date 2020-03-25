@@ -6,23 +6,23 @@
     <ion-progress-bar *ngIf="isLoading" type="indeterminate"></ion-progress-bar>
     <ion-list no-lines class="list-style">
       <div class='input-wrapper'>
-        <ion-item>
+        <ion-item [ngClass]="{'error': formLogin.controls['user']?.errors?.required && ! formLogin.untouched}">
           <ion-input placeholder="Usuario" name="user" type="email" spellcheck="false" formControlName="user">
             <ion-icon class="input" src="/assets/sign-in/usuario-icon.svg" slot="start"></ion-icon>
           </ion-input>
         </ion-item>
-        <p class="error-msg" *ngIf="formLogin.controls['user']?.errors?.required">
+        <p class="error-msg" *ngIf="formLogin.controls['user']?.errors?.required && ! formLogin.untouched">
           <ion-icon class="bg-white" name="information-circle" slot="start" > </ion-icon>Usuario requerido
         </p>
       </div>
 
       <div class='input-wrapper'>
-        <ion-item>
-          <ion-input placeholder="Usuario" name="password" type="password" spellcheck="false" formControlName="password">
+        <ion-item [ngClass]="{'error': formLogin.controls['password']?.errors?.required && ! formLogin.untouched}">
+          <ion-input placeholder="Password" name="password" type="password" spellcheck="false" formControlName="password">
             <ion-icon class="input" src="/assets/sign-in/contraseña-icon.svg" slot="start"></ion-icon>
           </ion-input>
         </ion-item>
-        <p class="error-msg"  *ngIf="formLogin.controls['password']?.errors?.required">
+        <p class="error-msg"  *ngIf="formLogin.controls['password']?.errors?.required && ! formLogin.controls['password'].untouched">
           <ion-icon class="bg-white" name="information-circle" slot="start" > </ion-icon>Contraseña requerida
         </p>
       </div>
