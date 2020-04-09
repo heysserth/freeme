@@ -7,7 +7,7 @@
     <ion-list no-lines class="list-style">
       <div class='input-wrapper'>
         <ion-item [ngClass]="{'error': formLogin.controls['user']?.errors?.required && ! formLogin.untouched}">
-          <ion-input placeholder="Usuario" name="user" type="email" spellcheck="false" formControlName="user">
+          <ion-input placeholder="Usuario · " name="user" type="email" spellcheck="false" formControlName="user">
             <ion-icon class="input" src="/assets/sign-in/usuario-icon.svg" slot="start"></ion-icon>
           </ion-input>
         </ion-item>
