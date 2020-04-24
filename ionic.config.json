@@ -1,7 +1,8 @@
 {
   "name": "freemeAngular",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular",
   "id": "672e13ae"
